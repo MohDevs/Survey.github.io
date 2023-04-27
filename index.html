@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    
+    <div class="heading-1"> 
+        <h1>Thanks for filling out the survey</h1>
+    </div>
+   
+<div class="form-align">
+    <form class="form-1">
+        
+        <div>
+            <label for="email">
+                First Name:
+            </label>
+            <br>
+                <input type="text" id="email" name="email" placeholder="First Name" class="input-1" required>
+        </div>
+        
+        <div>
+            <label for="email">
+                Last Name:
+            </label>
+            <br>
+                <input type="text" id="email" name="email" placeholder="Last Name"  class="input-1" required>
+        </div>
+
+        <div>
+            <label for="email">
+               Email Address:
+            </label>
+            <br>
+                <input type="text" id="email" name="email" placeholder="Email Address"  class="input-1">
+        </div>
+
+
+        <div>
+            <label for="email">
+                Phone Number:
+            </label>
+            <br>
+                <input type="text" id="number" name="number" placeholder="Phone Number"  class="input-1">
+        </div>
+
+        <div>
+            <label id="number-label">Age: <span class="optional">
+                (Optional)
+            </label> <br>
+
+            <input type="number" name="Age" id="number" placeholder="Please Enter Your Age" min="18" max="99" required  class="input-1">
+        </div>
+
+
+
+        <div  class="margin-top3">
+            <label id="First" for="dropdown">What do you need help with?</label><br>
+
+            <select name="radio" id="First">
+                <option value="Good">Collabs</option>
+                <option value="Good">Projects</option>
+                <option value="Good">Website</option>
+                <option value="Good">Mentorship</option>
+            </select>
+        </div>
+               
+
+        <div  class="margin-top2">
+            <p>Are you located in PA?</p>
+            <input type="radio" id="yes" class="input-radio" name="page" value="yes"><br>
+            <label for="yes">Yes</label>
+            <br>
+            <input type="radio" id="no" class="input-radio" name="page" value="no">
+            <label for="yes">   <nav>No</nav></label>
+        </div>
+
+
+        <div class="margin-top1">
+            <p>How would you like to be contacted?</p>
+            <input type="checkbox">
+            <br>
+            <label for="location">Email</label>
+            <br>
+            <input type="checkbox">
+            <br>
+            <label for="location">Phone</label>
+        </div>
+
+       <div class="comment-section">
+        <textarea id="comments" rows="10" cols="62" name="comment" placeholder="comment here" class="input-textarea"></textarea>
+       </div>
+
+       <div id="button">
+        <input type="button" id="submit" value="Submit" class="submit-btn">
+
+       </div>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+/*VENDOR PREFIXING*/
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+body{
+    background: linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% );
+   
+}
+
+.container-toggle{
+    display: none;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.bar1{
+    width: 30px;
+    height: 0.3rem;
+    background-color: black;
+    margin: 3px 0;
+    cursor: pointer;
+    border-color: white;
+    border-radius: 10px;
+}
+
+.container{
+    padding: 30px;
+    background: rgb(247, 230, 205)
+}
+
+.navigation{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navigation li{
+    list-style-type: none;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navigation li:hover a{
+    color: red;
+}
+
+
+/*
+.Main-section{
+    
+}
+*/
+
+
+.form-align p, .form-align label{
+    font-size: 22px;
+}
+
+.optional{
+    font-size: 17px;
+    color: rgb(140, 135, 135);
+}
+
+.div-1{
+    text-align: center;
+    font-size: 30px;
+    font-family: Lobster;
+    padding-top: 15rem;
+    flex-wrap: wrap;
+}
+
+
+.div-1 h1{
+    font-family: Lobster;
+}
+
+.div-2{
+    text-align: center;
+    padding-top: 4rem;
+    line-height: 2rem;
+    font-size: 20px;
+    flex-wrap: wrap;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.click-here{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.click-here a:hover{
+    color: red;
+}
+
+.click-here a{
+    color: black;
+}
+
+
+.footer{
+    padding-top: 15rem;
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.footer li+li:before{
+    content: "|";
+    padding: 10px;
+    color: black;
+}
+
+.footer a{
+    color: black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-wrap: wrap;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover{
+    color: red;
+}
+
+
+/*
+CONTACTS PAGE
+*/
+
+
+
+
+
+form{
+    border: 1px solid rgb(160, 158, 158);
+    padding: 1rem;
+    box-shadow: 2px 1px 1px white;
+    background: linear-gradient( 109.5deg,  rgb(227, 230, 185) 11.2%, rgb(202, 177, 151) 100.2% );
+    line-height: 2rem;
+    width: 35%;
+    border-radius: 0.25rem;
+}
+
+form{
+   width: 50%;
+   display: block;
+   margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+form .input-1{
+    width: 95%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.heading-1{
+    text-align: center;
+    margin-top: 5rem;
+    font-family: Lobster;
+}
+
+
+.submit-btn{
+    width: 98.5%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    background: linear-gradient( 109.5deg,  rgb(227, 230, 185) 11.2%, rgb(202, 177, 151) 100.2% );
+}
+
+.submit-btn{
+    font-size: 17px;
+}
+
+
+
+.input-textarea{
+    min-height: 120px;
+    padding: 0.625rem;
+    width: 95%;
+    border: none;
+  }
+
+
+  .margin-top1, .margin-top2, .margin-top3{
+    margin-top: 2rem;
+  }
+
+  .margin-top1 p, .margin-top2 p, .margin-top3 {
+    font-weight: bold;
+  }
+
+ 
+/*MEDIAM AND LARGE SCREENS*/
+
+@media all and (max-width: 800px){
+
+    .navigation{
+        justify-content: space-around;
+    }
+
+    form{
+        width: 94%;
+    }
+
+}
+
+/*SMALL SCREENS*/
+@media all and (max-width: 600px){
+
+    .navigation-bar{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navigation{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5rem;
+        margin-left: -2rem;
+    }
+
+    .navigation.active{
+        display: flex;
+    }
+
+
+    nav{
+        display: flex;
+      justify-content: flex-start;
+    }
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    form{
+        display: block;
+        margin: 0;
+        margin-top: 3rem;
+        margin-bottom: 0;
+        border: none;
+        width: 93.5%;
+    }
+
+
+    .container-toggle{
+        display: flex;
+    }
+
+
+
+
+}
